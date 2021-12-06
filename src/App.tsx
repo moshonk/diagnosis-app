@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { Button, Content } from 'carbon-components-react';
+import PageHeader from './components/PageHeader/PageHeader';
+import landingPage from './content/LandingPage/LandingPage';
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
+  <Switch>
+    <Route exact path="/" component={landingPage}></Route>
+  </Switch>
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <PageHeader></PageHeader>
+        <Content>
+          <Button></Button>
+        </Content>
     </div>
   );
 }
